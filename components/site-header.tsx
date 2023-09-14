@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaCog } from "react-icons/fa";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -12,7 +12,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 export function SiteHeader() {
-  const [secureInput, setSecureInput] = useState(localStorage.getItem('pangeaApiKey') || '');
+  const [secureInput, setSecureInput] = useState('');
   const { toast } = useToast();
 
   const handleSave = () => {
@@ -23,6 +23,13 @@ export function SiteHeader() {
       duration: 2000,
     });
   };
+
+  useEffect(() => {
+    const apiKey = localStorage.getItem('pangeaApiKey');
+    if (apiKey) {
+      setSecureInput(apiKey);
+    }
+  }, []);
 
   return (
     <header className="bg-background sticky top-0 z-40 w-full border-b">

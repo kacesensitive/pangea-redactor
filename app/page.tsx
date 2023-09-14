@@ -10,7 +10,7 @@ export default function IndexPage() {
   const [result, setResult] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isHeaderRedacted, setHeaderRedacted] = useState<boolean>(false);
-  const { toast } = useToast()
+  const { toast } = useToast();
 
   useEffect(() => {
     const interval = setInterval(() => {
