@@ -122,7 +122,7 @@ export default function IndexPage() {
           Redactor
         </span>
         <span
-          className={`absolute inset-y-0 ${isHeaderRedacted ? 'left-0' : 'left-auto'} right-0 w-full mt-2 h-[70%] bg-primary transition-all duration-700 ${isHeaderRedacted ? 'w-full' : 'w-0'
+          className={`absolute inset-y-0 ${isHeaderRedacted ? 'left-0' : 'left-auto'} right-0  mt-2 h-[70%] bg-primary transition-all duration-700 ${isHeaderRedacted ? 'w-full' : 'w-0'
             }`}
           style={{
             top: '0',
