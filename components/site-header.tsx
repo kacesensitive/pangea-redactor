@@ -12,7 +12,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 export function SiteHeader() {
-  const [secureInput, setSecureInput] = useState('');
+  const [secureInput, setSecureInput] = useState(localStorage.getItem('pangeaApiKey') || '');
   const { toast } = useToast();
 
   const handleSave = () => {
