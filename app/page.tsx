@@ -165,13 +165,13 @@ export default function IndexPage() {
       </label>
       <div className="flex space-x-4 mt-4">
         <Button
-          className={`bg-red-500 text-white py-2 px-4 rounded ${isLoading ? 'opacity-50' : ''} w-20`}
+          className={`bg-red-500 text-white hover:text-secondary py-2 px-4 rounded ${isLoading ? 'opacity-50' : ''} w-20`}
           onClick={handleRedact}
           disabled={isLoading}
         >
           {isLoading ? <span className="animate-spin"><FaSpinner /></span> : 'Redact'}
         </Button>
-        <Button className="bg-gray-500 text-white py-2 px-4 rounded" onClick={() => {
+        <Button className="bg-primary text-secondary py-2 px-4 rounded" onClick={() => {
           setText('');
           setResult('');
         }}>Clear</Button>
