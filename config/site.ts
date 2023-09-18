@@ -12,6 +12,6 @@ export const siteConfig = {
   ],
   links: {
 
-    github: "https://github.com/kacesensitive?tab=repositories",
+    github: "https://github.com/kacesensitive/pangea-redactor",
   },
 }
